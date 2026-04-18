@@ -9,73 +9,87 @@ struct ContentView: View {
     @State private var statusMessage = "Drag a folder or images here"
     @State private var showFileImporter = false
     
+    // Inspector State
+    @State private var inspectorEntries: [MetadataEntry] = []
+    @State private var isScanningMetadata = false
+    @State private var selectedFileURL: URL?
+    
     var body: some View {
-        VStack(spacing: 0) {
-            // Header
-            HStack {
-                Text("VisualExif")
-                    .font(.system(size: 24, weight: .bold))
-                Spacer()
-                Button(action: { showFileImporter = true }) {
-                    Label("Select Folder", systemImage: "folder.badge.plus")
-                        .padding(8)
-                        .background(Color.blue.opacity(0.1))
-                        .cornerRadius(8)
-                }
-                .buttonStyle(.plain)
-            }
-            .padding(24)
-            .background(Color.black.opacity(0.1))
-            
-            ScrollView {
-                VStack(spacing: 24) {
-                    // Drop Zone / File Info
-                    VStack {
-                        if filesToProcess.isEmpty {
-                            DropZoneView(status: $statusMessage) { urls in
-                                handleDroppedURLs(urls)
-                            }
-                        } else {
-                            ProcessedFilesView(files: filesToProcess, onClear: {
-                                filesToProcess = []
-                                statusMessage = "Drag a folder or images here"
-                            })
-                        }
+        HStack(spacing: 0) {
+            // Main Content Area
+            VStack(spacing: 0) {
+                // Header
+                HStack {
+                    Text("VisualExif")
+                        .font(.system(size: 24, weight: .bold))
+                    Spacer()
+                    Button(action: { showFileImporter = true }) {
+                        Label("Select Folder", systemImage: "folder.badge.plus")
+                            .padding(8)
+                            .background(Color.blue.opacity(0.1))
+                            .cornerRadius(8)
                     }
-                    .padding(.horizontal)
-                    
-                    // Options
-                    TagSelectorView(selectedCategories: $selectedCategories)
+                    .buttonStyle(.plain)
+                }
+                .padding(24)
+                .background(Color.black.opacity(0.1))
+                
+                ScrollView {
+                    VStack(spacing: 24) {
+                        // Drop Zone / File Info
+                        VStack {
+                            if filesToProcess.isEmpty {
+                                DropZoneView(status: $statusMessage) { urls in
+                                    handleDroppedURLs(urls)
+                                }
+                            } else {
+                                ProcessedFilesView(files: filesToProcess, onClear: {
+                                    filesToProcess = []
+                                    inspectorEntries = []
+                                    selectedFileURL = nil
+                                    statusMessage = "Drag a folder or images here"
+                                })
+                            }
+                        }
                         .padding(.horizontal)
-                    
-                    // Action Section
-                    VStack(spacing: 16) {
-                        if isProcessing {
-                            ProgressView(value: progress)
-                                .progressViewStyle(.linear)
-                                .tint(.blue)
-                            Text("Processing \(Int(progress * 100))%")
-                                .font(.caption)
-                        } else {
-                            Button(action: startCleaning) {
-                                Text("Neutralize Metadata")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .frame(maxWidth: .infinity)
-                                    .padding()
-                                    .background(filesToProcess.isEmpty ? Color.gray : Color.blue)
-                                    .cornerRadius(12)
+                        
+                        // Options
+                        TagSelectorView(selectedCategories: $selectedCategories)
+                            .padding(.horizontal)
+                        
+                        // Action Section
+                        VStack(spacing: 16) {
+                            if isProcessing {
+                                ProgressView(value: progress)
+                                    .progressViewStyle(.linear)
+                                    .tint(.blue)
+                                Text("Processing \(Int(progress * 100))%")
+                                    .font(.caption)
+                            } else {
+                                Button(action: startCleaning) {
+                                    Text("Neutralize Metadata")
+                                        .font(.headline)
+                                        .foregroundColor(.white)
+                                        .frame(maxWidth: .infinity)
+                                        .padding()
+                                        .background(filesToProcess.isEmpty ? Color.gray : Color.blue)
+                                        .cornerRadius(12)
+                                }
+                                .disabled(filesToProcess.isEmpty || selectedCategories.isEmpty)
+                                .buttonStyle(.plain)
                             }
-                            .disabled(filesToProcess.isEmpty || selectedCategories.isEmpty)
-                            .buttonStyle(.plain)
                         }
+                        .padding(24)
                     }
-                    .padding(24)
+                    .padding(.vertical)
                 }
-                .padding(.vertical)
             }
+            .frame(maxWidth: .infinity)
+            
+            // Inspector Panel
+            MetadataInspectorView(entries: inspectorEntries, isLoading: isScanningMetadata)
         }
-        .frame(minWidth: 500, minHeight: 600)
+        .frame(minWidth: 800, minHeight: 600)
         .background(Color(white: 0.05).ignoresSafeArea())
         .fileImporter(isPresented: $showFileImporter, allowedContentTypes: [.folder], allowsMultipleSelection: false) { result in
             switch result {
@@ -103,14 +117,35 @@ struct ContentView: View {
         }
         filesToProcess = allFiles
         statusMessage = "\(allFiles.count) files detected"
+        
+        // Inspect the first file
+        if let first = allFiles.first {
+            inspectFile(first)
+        }
     }
     
     private func handleFolderSelection(_ url: URL) {
-        // Gain access to the folder if it's outside our sandbox
         _ = url.startAccessingSecurityScopedResource()
         let scanned = FolderScanner.scan(at: url)
         filesToProcess = scanned
         statusMessage = "Scanning done: \(scanned.count) files found"
+        
+        if let first = scanned.first {
+            inspectFile(first)
+        }
+    }
+    
+    private func inspectFile(_ url: URL) {
+        selectedFileURL = url
+        isScanningMetadata = true
+        inspectorEntries = []
+        
+        ExifToolWrapper.shared.read(path: url.path) { entries in
+            DispatchQueue.main.async {
+                self.inspectorEntries = entries ?? []
+                self.isScanningMetadata = false
+            }
+        }
     }
     
     private func startCleaning() {
@@ -139,7 +174,11 @@ struct ContentView: View {
     private func cleanupAfterProcessing() {
         isProcessing = false
         statusMessage = "Success! All files neutralized."
-        // We keep the list visible so the user can verify, or we could clear it.
+        
+        // Refresh inspection for the current file to show it's clean
+        if let current = selectedFileURL {
+            inspectFile(current)
+        }
     }
 }
 
@@ -165,14 +204,14 @@ struct DropZoneView: View {
         .onDrop(of: [.fileURL], isTargeted: nil) { providers in
             var found = false
             for provider in providers {
-                provider.loadObject(ofClass: URL.self) { url, _ in
+                _ = provider.loadObject(ofClass: URL.self) { url, _ in
                     if let url = url {
-                        found = true
                         DispatchQueue.main.async {
                             onDrop([url])
                         }
                     }
                 }
+                found = true
             }
             return found
         }

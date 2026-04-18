@@ -13,6 +13,7 @@
 		FB51DA0529B8A7A000AAAAAA /* ExifToolWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51DA0429B8A7A000AAAAAA /* ExifToolWrapper.swift */; };
 		FB51DA0729B8A7A000AAAAAA /* FolderScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51DA0629B8A7A000AAAAAA /* FolderScanner.swift */; };
 		FB51DA0929B8A7A000AAAAAA /* TagSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51DA0829B8A7A000AAAAAA /* TagSelectorView.swift */; };
+		FB51DA0B29B8A7A000AAAAAA /* MetadataInspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51DA0A29B8A7A000AAAAAA /* MetadataInspectorView.swift */; };
 		FB51DA1129B8A8A000AAAAAA /* ExifTool in Resources */ = {isa = PBXBuildFile; fileRef = FB51DA1029B8A8A000AAAAAA /* ExifTool */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		FB51DA0429B8A7A000AAAAAA /* ExifToolWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExifToolWrapper.swift; sourceTree = "<group>"; };
 		FB51DA0629B8A7A000AAAAAA /* FolderScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderScanner.swift; sourceTree = "<group>"; };
 		FB51DA0829B8A7A000AAAAAA /* TagSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectorView.swift; sourceTree = "<group>"; };
+		FB51DA0A29B8A7A000AAAAAA /* MetadataInspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataInspectorView.swift; sourceTree = "<group>"; };
 		FB51DA1029B8A8A000AAAAAA /* ExifTool */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ExifTool; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 				FB51DA0429B8A7A000AAAAAA /* ExifToolWrapper.swift */,
 				FB51DA0629B8A7A000AAAAAA /* FolderScanner.swift */,
 				FB51DA0829B8A7A000AAAAAA /* TagSelectorView.swift */,
+				FB51DA0A29B8A7A000AAAAAA /* MetadataInspectorView.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				FB51DA0529B8A7A000AAAAAA /* ExifToolWrapper.swift in Sources */,
 				FB51DA0729B8A7A000AAAAAA /* FolderScanner.swift in Sources */,
 				FB51DA0929B8A7A000AAAAAA /* TagSelectorView.swift in Sources */,
+				FB51DA0B29B8A7A000AAAAAA /* MetadataInspectorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

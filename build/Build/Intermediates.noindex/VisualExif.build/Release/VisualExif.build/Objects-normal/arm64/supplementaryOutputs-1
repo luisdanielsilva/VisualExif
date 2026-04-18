@@ -1,0 +1,12 @@
+{
+  "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/VisualExif/Source/VisualExifApp.swift" : {
+    "abi-baseline-json" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif.abi.json",
+    "const-values" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif-primary.swiftconstvalues",
+    "dependencies" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif-primary.d",
+    "diagnostics" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif-primary.dia",
+    "objc-header" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif-Swift.h",
+    "swiftdoc" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif.swiftdoc",
+    "swiftmodule" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif.swiftmodule",
+    "swiftsourceinfo" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif.swiftsourceinfo"
+  }
+}

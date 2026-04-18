@@ -1,0 +1,36 @@
+{
+  "" : {
+    "const-values" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif-primary.swiftconstvalues",
+    "dependencies" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif-primary.d",
+    "diagnostics" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif-primary.dia",
+    "emit-module-dependencies" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif-primary-emit-module.dia",
+    "pch" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExif-primary.swiftdeps"
+  },
+  "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/VisualExif/Source/ContentView.swift" : {
+    "index-unit-output-path" : "/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/ContentView.o",
+    "llvm-bc" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/ContentView.bc",
+    "object" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/ContentView.o"
+  },
+  "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/VisualExif/Source/ExifToolWrapper.swift" : {
+    "index-unit-output-path" : "/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/ExifToolWrapper.o",
+    "llvm-bc" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/ExifToolWrapper.bc",
+    "object" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/ExifToolWrapper.o"
+  },
+  "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/VisualExif/Source/FolderScanner.swift" : {
+    "index-unit-output-path" : "/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/FolderScanner.o",
+    "llvm-bc" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/FolderScanner.bc",
+    "object" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/FolderScanner.o"
+  },
+  "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/VisualExif/Source/TagSelectorView.swift" : {
+    "index-unit-output-path" : "/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/TagSelectorView.o",
+    "llvm-bc" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/TagSelectorView.bc",
+    "object" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/TagSelectorView.o"
+  },
+  "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/VisualExif/Source/VisualExifApp.swift" : {
+    "index-unit-output-path" : "/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExifApp.o",
+    "llvm-bc" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExifApp.bc",
+    "object" : "/Users/luissilva/.gemini/antigravity/scratch/VisualExif/build/Build/Intermediates.noindex/VisualExif.build/Release/VisualExif.build/Objects-normal/arm64/VisualExifApp.o"
+  }
+}

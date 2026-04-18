@@ -1,5 +1,16 @@
 import Foundation
 
+struct MetadataEntry: Identifiable, Codable {
+    var id: String { key }
+    let key: String
+    let value: String
+    
+    // Supporting dynamic keys from JSON
+    enum CodingKeys: String, CodingKey {
+        case key, value
+    }
+}
+
 /// A robust wrapper to communicate with the bundled ExifTool Perl script.
 class ExifToolWrapper {
     
@@ -66,6 +77,49 @@ class ExifToolWrapper {
             }
         } catch {
             completion(false, "Failed to run process: \(error.localizedDescription)")
+        }
+    }
+    
+    /// Reads metadata from a file and returns an array of entries.
+    func read(path: String, completion: @escaping ([MetadataEntry]?) -> Void) {
+        guard let toolURL = exifToolURL else {
+            completion(nil)
+            return
+        }
+        
+        let task = Process()
+        let pipe = Pipe()
+        
+        task.executableURL = toolURL
+        task.arguments = ["-j", "-G1", "-s", path] // -j for JSON, -G1 for group names, -s for short names
+        task.standardOutput = pipe
+        
+        do {
+            try task.run()
+            task.waitUntilExit()
+            
+            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+            
+            // ExifTool -j returns an array of objects [ { ... } ]
+            if let json = try JSONSerialization.jsonObject(with: data) as? [[String: Any]],
+               let firstObject = json.first {
+                
+                var entries: [MetadataEntry] = []
+                for (key, value) in firstObject {
+                    // Skip technical keys like SourceFile
+                    if key == "SourceFile" { continue }
+                    entries.append(MetadataEntry(key: key, value: "\(value)"))
+                }
+                
+                // Sort by key name for consistency
+                entries.sort { $0.key < $1.key }
+                completion(entries)
+            } else {
+                completion(nil)
+            }
+        } catch {
+            print("Error reading metadata: \(error)")
+            completion(nil)
         }
     }
 }
