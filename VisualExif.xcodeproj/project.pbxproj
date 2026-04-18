@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB30BB222F81624A00889B4C /* Sources */ = {isa = PBXBuildFile; fileRef = FB30BB202F81624A00889B4C /* Sources */; };
+		FB51DA0129B8A7A000AAAAAA /* VisualExifApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51DA0029B8A7A000AAAAAA /* VisualExifApp.swift */; };
+		FB51DA0329B8A7A000AAAAAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51DA0229B8A7A000AAAAAA /* ContentView.swift */; };
+		FB51DA0529B8A7A000AAAAAA /* ExifToolWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51DA0429B8A7A000AAAAAA /* ExifToolWrapper.swift */; };
+		FB51DA0729B8A7A000AAAAAA /* FolderScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51DA0629B8A7A000AAAAAA /* FolderScanner.swift */; };
+		FB51DA0929B8A7A000AAAAAA /* TagSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51DA0829B8A7A000AAAAAA /* TagSelectorView.swift */; };
+		FB51DA1129B8A8A000AAAAAA /* ExifTool in Resources */ = {isa = PBXBuildFile; fileRef = FB51DA1029B8A8A000AAAAAA /* ExifTool */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FB30BB242F81624A00889B4C /* VisualExif.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualExif.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB51DA0029B8A7A000AAAAAA /* VisualExifApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualExifApp.swift; sourceTree = "<group>"; };
+		FB51DA0229B8A7A000AAAAAA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FB51DA0429B8A7A000AAAAAA /* ExifToolWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExifToolWrapper.swift; sourceTree = "<group>"; };
+		FB51DA0629B8A7A000AAAAAA /* FolderScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderScanner.swift; sourceTree = "<group>"; };
+		FB51DA0829B8A7A000AAAAAA /* TagSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagSelectorView.swift; sourceTree = "<group>"; };
+		FB51DA1029B8A8A000AAAAAA /* ExifTool */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ExifTool; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB30BB212F81624A00889B4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB30BB1B2F81624A00889B4C = {
+			isa = PBXGroup;
+			children = (
+				FB30BB262F81624A00889B4C /* VisualExif */,
+				FB30BB252F81624A00889B4C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB30BB252F81624A00889B4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB30BB242F81624A00889B4C /* VisualExif.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB30BB262F81624A00889B4C /* VisualExif */ = {
+			isa = PBXGroup;
+			children = (
+				FB51DA1229B8A8B000AAAAAA /* Source */,
+				FB51DA1329B8A8C000AAAAAA /* Resources */,
+			);
+			path = VisualExif;
+			sourceTree = "<group>";
+		};
+		FB51DA1229B8A8B000AAAAAA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FB51DA0029B8A7A000AAAAAA /* VisualExifApp.swift */,
+				FB51DA0229B8A7A000AAAAAA /* ContentView.swift */,
+				FB51DA0429B8A7A000AAAAAA /* ExifToolWrapper.swift */,
+				FB51DA0629B8A7A000AAAAAA /* FolderScanner.swift */,
+				FB51DA0829B8A7A000AAAAAA /* TagSelectorView.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FB51DA1329B8A8C000AAAAAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FB51DA1029B8A8A000AAAAAA /* ExifTool */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB30BB232F81624A00889B4C /* VisualExif */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB30BB2F2F81624C00889B4C /* Build configuration list for PBXNativeTarget "VisualExif" */;
+			buildPhases = (
+				FB30BB202F81624A00889B4C /* Sources */,
+				FB30BB212F81624A00889B4C /* Frameworks */,
+				FB30BB222F81624A00889B4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VisualExif;
+			productName = VisualExif;
+			productReference = FB30BB242F81624A00889B4C /* VisualExif.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB30BB1C2F81624A00889B4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2640;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					FB30BB232F81624A00889B4C = {
+						CreatedOnToolsVersion = 26.4;
+						LastSwiftMigration = 2640;
+					};
+				};
+			};
+			buildConfigurationList = FB30BB1F2F81624A00889B4C /* Build configuration list for PBXProject "VisualExif" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB30BB1B2F81624A00889B4C;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = FB30BB252F81624A00889B4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB30BB232F81624A00889B4C /* VisualExif */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB30BB222F81624A00889B4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB51DA1129B8A8A000AAAAAA /* ExifTool in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB30BB202F81624A00889B4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB51DA0129B8A7A000AAAAAA /* VisualExifApp.swift in Sources */,
+				FB51DA0329B8A7A000AAAAAA /* ContentView.swift in Sources */,
+				FB51DA0529B8A7A000AAAAAA /* ExifToolWrapper.swift in Sources */,
+				FB51DA0729B8A7A000AAAAAA /* FolderScanner.swift in Sources */,
+				FB51DA0929B8A7A000AAAAAA /* TagSelectorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FB30BB2D2F81624C00889B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FB30BB2E2F81624C00889B4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FB30BB302F81624C00889B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Luis.VisualExif;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FB30BB312F81624C00889B4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Luis.VisualExif;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB30BB1F2F81624A00889B4C /* Build configuration list for PBXProject "VisualExif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB30BB2D2F81624C00889B4C /* Debug */,
+				FB30BB2E2F81624C00889B4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB30BB2F2F81624C00889B4C /* Build configuration list for PBXNativeTarget "VisualExif" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB30BB302F81624C00889B4C /* Debug */,
+				FB30BB312F81624C00889B4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB30BB1C2F81624A00889B4C /* Project object */;
+}
